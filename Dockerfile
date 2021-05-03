@@ -1,6 +1,7 @@
 FROM tomcat:8.5.65 
 
-ADD /*.war /usr/local/tomcat/webapps/
+WORKDIR /var/lib/jenkins/workspace/TESTING_ENV-DOCKERIMAGES-1/target/
+ADD ./target/*.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
